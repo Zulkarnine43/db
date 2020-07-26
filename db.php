@@ -6,7 +6,15 @@ $password="";
 
 $con=mysqli_connect("$localhost","$name","$password");
 
-$sql="CREATE DATABASE shop";
+$sql="CREATE DATABASE dokan";
 
-mysqli_query($con,$sql);
+$result=mysqli_query($con,$sql);
+
+if($result===TRUE){
+	echo "Database Creadted";
+}
+else
+{
+	echo "Datababse not Created";
+}
 ?>
